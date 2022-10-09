@@ -65,7 +65,7 @@
                 </div>
                 <h5>Cantidad</h5>
                 <div class="quantity">
-                    <button v-on:click="pedido.cantidad -=1 ">-</button> <div>{{pedido.cantidad}}</div> <button v-on:click="pedido.cantidad +=1">+</button>
+                    <button v-on:click="pedido.cantidad -=1 ;if(pedido.cantidad<=0) pedido.cantidad=1">-</button> <div>{{pedido.cantidad}}</div> <button v-on:click="pedido.cantidad +=1">+</button>
                 </div>
                 <div class="buy-box" v-show="pedido.cantidad>0 && pedido.color!=null">
                     <button type="button" class="btn btn-primary" v-on:click="realizarPedido">Comprar</button>
